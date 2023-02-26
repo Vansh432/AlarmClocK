@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <h1 id="heading">ALARM CLOCK</h1>
+    <!--Alarm clock project-->
+    <div class="alarmclock">
+        <div class="container">
+            <!-- current time shows-->
+            <div class="Time">
+                <h1><span id="Hours" class="Timedis">08</span><span class="dass">:</span><span class="Timedis"
+                        id="Minutes">30</span><span class="dass">:</span><span class="Timedis" id="Seconds">00</span>
+                </h1>
+                <span class="timeFormat" id="AMorPM">PM</span>
+            </div>
+            <!--Day details-->
+            <div class="day">
+                <p id="dayDetails">fer, Thursday 23</p>
+            </div>
+            <!-- take the time -->
+            <div class="setAlarm">
+                <input type="number" id="HoursInput" class="inputTime" placeholder="H">
+                <input type="number" id="minutesInput" class="inputTime" placeholder="M">
+                <input type="number" id="secondsInput" class="inputTime" placeholder="S">
+                <br>
+                <br>
+                <button id="setvalue">Set Alarm</button>
+                <!--on click function for stop the music-->
+                <button id="stopAlarm" onclick="stopMusic()">Stop Alarm</button>
+            </div>
+
+
+        </div>
+        <!-- upcoming Alarm section -->
+        <div id="upcomingAlarm">
+            <h3 >No Alarm Set</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

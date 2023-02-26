@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height:fit-content;
+    background-color: #2e2e44;
+    color: #fff;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Alarm clock -->*/
+
+#heading{
+    text-align: center;
+    font-size: 3.4vw;
+    font-family: var(--font-family);
+    margin: 50px auto;
+    padding: 10px;
+    color: #000;
+    width: fit-content;
+    border-radius:10px;
+    background-color: #d2d900;
+    border: 2px solid black;
+}
+.alarmclock {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -4px;
+    width: 102%;
+    height: 102%;
+    background: linear-gradient(45deg, #df73dc, #6cd8ff);
+    z-index: -1;
+    filter: blur(40px);
+}
+
+.container {
+    position: relative;
+    width: 55%;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background: #2d2f41;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+}
+
+.container .Time {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    height: 60px;
+
+}
+
+.container .Time h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.4vw;
+
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.container .Time #Hours {
+    background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.container .Time #Minutes {
+    background: -webkit-linear-gradient(90deg, #a75c06, #f8b86f);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.container .Time #Seconds {
+    background: -webkit-linear-gradient(90deg, #00aa08, #91f67a);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.Time .timeFormat {
+    position: relative;
+    top: 10px;
+    font-size: 1.2rem;
+    font-family: var(--font-family);
+    background: -webkit-linear-gradient(90deg, #f90021c6, #f3666682);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bolder;
+
+}
+
+.Time h1 .dass {
+    position: relative;
+    bottom: 6px;
+    color: aliceblue;
+}
+
+.Time h1 span {
+    margin: 0px 5px;
+}
+
+.container .day {
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.container .day p {
+    width: fit-content;
+    font-size: 1.3rem;
+    margin: auto;
+    font-family: var(--font-family);
+    font-weight: 600;
+    background: -webkit-linear-gradient(90deg, #ff16b5, #f162bf82);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.container .setAlarm {
+    width: 100%;
+    text-align: center;
+}
+
+.container .setAlarm .inputTime {
+    width: 80px;
+    height: 60px;
+    margin: 10px 13px;
+    font-size: 1.9rem;
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+
+
+.setAlarm .format {
+    margin: 0px 5px;
+    border: 1px solid rgb(255, 239, 20);
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    background: transparent;
+}
+
+.setAlarm .TIMEBOX {
+    display: inline;
+    margin: 40px 10px;
+}
+
+.setAlarm label {
+    font-family: var(--font-family);
+    color: #fff;
+}
+
+
+.setAlarm #setvalue,#stopAlarm  {
+    padding: 8px 25px;
+    margin: 15px 10px;
+    font-family: var(--font-family);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    background-color: #01bbff;
+    box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.3);
+    color: #fff;
+    border: none;
+    transition: 0.4s;
+}
+
+
+.setAlarm #setvalue:hover,#stopAlarm:hover {
+    background-color: #0185b6;
+}
+#stopAlarm {
+display:none;
+}
+
+/*upcoming alarm clock section  */
+
+#upcomingAlarm {
+    position: relative;
+    padding: 4px 10px;
+    width: 230px;
+    height: 30px;
+    background: #2d2f41;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    margin: 10px 20px;
+    border-radius: 10px;
+    height: fit-content;
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+#upcomingAlarm::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #df73dc, #6cd8ff);
+    width: 102%;
+    height: 103%;
+    top: -1px;
+    left: -3px;
+    z-index: -1;
+    filter: blur(40px);
+}
+
+#upcomingAlarm h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+#upcomingAlarm #deletAlarm{
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-family: var(--font-family);
+    box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.3);
+    background-color: #01bbff;
+    cursor: pointer;
+    border: none;
+    transition: 0.4s;
+}
+
+#deletAlarm:hover {
+    background-color: #00668a;
+}
