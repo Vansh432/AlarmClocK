@@ -1,33 +1,25 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     min-height:fit-content;
+    min-height: 100vh;
     background-color: #2e2e44;
+    flex-wrap: wrap;
     color: #fff;
     --font-family: 'Inter', sans-serif;
 }
 
 /* Alarm clock -->*/
 
-#heading{
-    text-align: center;
-    font-size: 3.4vw;
-    font-family: var(--font-family);
-    margin: 50px auto;
-    padding: 10px;
-    color: #000;
-    width: fit-content;
-    border-radius:10px;
-    background-color: #d2d900;
-    border: 2px solid black;
-}
 .alarmclock {
     display: flex;
     justify-content: center;
     width: 800px;
     flex-wrap: wrap;
-    margin: auto;
 }
 
 .container::before {
@@ -68,8 +60,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.4vw;
-
+    font-size: 3.4rem;
     font-family: 'Fira Sans', sans-serif;
 }
 
@@ -238,4 +229,23 @@ display:none;
 
 #deletAlarm:hover {
     background-color: #00668a;
+}
+
+
+
+/*
+media query for responsive -->
+*/
+@media screen and (max-width:550px){
+    .container .Time h1 {
+        font-size:6.9vw;
+    }
+    .Time .timeFormat {
+        font-size: 3.7vw;
+    }
+    .container .day p {
+      font-size: 4.4vw;
+    }
+    
+    
 }
